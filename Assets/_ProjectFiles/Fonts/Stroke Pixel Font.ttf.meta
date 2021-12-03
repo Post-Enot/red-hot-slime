@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: e0c66137ef936a247a59400f877676f5
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Mystery Font
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 87ca9418785946e42b11de6cfe282bb2, type: 3}
+  - {fileID: 12800000, guid: 80317c2199d6cfc49893f4a694b4feae, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
