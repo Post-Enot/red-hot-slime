@@ -9,9 +9,9 @@ public sealed class GameMusic : MonoBehaviour
 
 	[SerializeField] private AudioClip _menuTheme;
 	[SerializeField] private AudioClip _gameTheme;
+	[SerializeField] private GameSettings _gameSettings;
 
 	private AudioSource _audioSource;
-	private GameSettings _gameSettings;
 
 	private void Awake()
 	{

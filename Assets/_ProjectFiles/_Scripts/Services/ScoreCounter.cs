@@ -6,7 +6,7 @@ public sealed class ScoreCounter : MonoBehaviour
 	[SerializeField] private float _secondsInScore = 0.1f;
 
 	//public readonly IndicatableValue<int> Score = new IndicatableValue<int>();
-	//public readonly IndicatableValue<int> BestScore = new IndicatableValue<int>();
+	//public readonly IndicatableValue<intBestScore = new IndicatableValue<int>();
 
 	private Coroutine _counting;
 
@@ -19,7 +19,7 @@ public sealed class ScoreCounter : MonoBehaviour
 
 	public int StopCounting()
 	{
-		StopCoroutine(_counting);
+		//StopCoroutine(_counting);
 		//int temp = Score.Value;
 		//Score.Value = 0;
 		//return temp;

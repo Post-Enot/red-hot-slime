@@ -10,20 +10,17 @@ public sealed class GameData : MonoBehaviour
 
 	public string PlayerProgressPath => CreatePathInGameDirectory(_playerProgressLocalPath);
 
-	private void Awake()
+	public void Init(GameServices gameServices)
 	{
 		HatsContainer = GetComponentInChildren<HatsContainer>();
-		//PlayerProgress.Upload(PlayerProgressPath);
+		gameServices.PlayerProgress.Upload(PlayerProgressPath);
 	}
 
 	public void InitTextsAtlas()
 	{
+		TextsAtlas = new TextAtlas();
+		TextsAtlas.InitTranslateTable("texts_atlas", new CsvFormatter('\n', ';'));
 		//TextsAtlas = new TextAtlas(new CsvFormatter('\n', ';'), "ru", "en", "texts_atlas");
-	}
-
-	private void OnApplicationQuit()
-	{
-		//PlayerProgress.Upload(PlayerProgressPath);
 	}
 
 	private string CreatePathInGameDirectory(string localPath)

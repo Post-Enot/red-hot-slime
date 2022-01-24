@@ -14,7 +14,7 @@ public sealed class Spikes : CellEntity, IEnemy, IPassable
 	private Coroutine _lifeTime;
 	private Visualizator _skin;
 
-	public void Init()
+	private void Awake()
 	{
 		_collider = GetComponent<Collider2D>();
 		_skin = GetComponent<Visualizator>();

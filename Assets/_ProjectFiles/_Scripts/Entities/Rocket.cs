@@ -20,7 +20,8 @@ public sealed class Rocket : AbstractRocket
 		GetComponent<SpriteRenderer>().enabled = false;
 		var fallenSound = GetComponent<AudioSource>();
 		//Skin.PlaySound(fallenSound.clip);
-		yield return new WaitWhile(() => fallenSound.isPlaying);
+		yield return new WaitForSeconds(1f);
+		//yield return new WaitWhile(() => fallenSound.isPlaying);
 		Destroy(gameObject);
 	}
 }

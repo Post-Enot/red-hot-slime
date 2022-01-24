@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 9163322142521924238}
   - component: {fileID: 9163322142521924233}
   - component: {fileID: -6157478463172254945}
+  - component: {fileID: -8770907268288946026}
   m_Layer: 0
   m_Name: Stone Rocket Prefab
   m_TagString: Untagged
@@ -47,7 +48,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ec0d2f1985ba55498431f64f5e44558, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _fallenAnimationTrigger: fallen
   _defaultMovingSpeedPerSecond: 2.5
+  _explosionAnimationTrigger: explosion
+  _explosionSound: {fileID: 0}
 --- !u!212 &9163322142521924238
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -214,6 +218,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-8770907268288946026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9163322142521924235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acdacd69dd98ae646b54cfdf90f96c6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6954832229700014261
 PrefabInstance:
   m_ObjectHideFlags: 0

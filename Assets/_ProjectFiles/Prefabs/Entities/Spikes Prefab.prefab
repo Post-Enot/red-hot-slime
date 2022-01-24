@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7770575119615102358}
   - component: {fileID: -1277962554003826169}
   - component: {fileID: 7932114790613175465}
+  - component: {fileID: 9142839089600394680}
   m_Layer: 0
   m_Name: Spikes Prefab
   m_TagString: Untagged
@@ -69,6 +70,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d4a9828ebde811468b3f8d0a95150b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _defaultLifeDuration: 4
+  _raisedAnimationTrigger: raised
+  _descendAnimationTrigger: descend
+  _raiseSound: {fileID: 0}
+  _descendSound: {fileID: 0}
 --- !u!212 &-8373182919349993802
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -261,3 +267,15 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &9142839089600394680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8443711590276387124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acdacd69dd98ae646b54cfdf90f96c6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

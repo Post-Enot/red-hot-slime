@@ -11,9 +11,9 @@ public sealed class UISound : MonoBehaviour
 	[SerializeField] private AudioClip _positiveButton;
 	[SerializeField] private AudioClip _negativeButton;
 	[SerializeField] private AudioClip _newWave;
+	[SerializeField] private GameSettings _gameSettings;
 
 	private AudioSource _audioSource;
-	private GameSettings _gameSettings;
 
 	public void Start()
 	{

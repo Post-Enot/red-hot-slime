@@ -14,6 +14,7 @@ public sealed class EntryPoint : MonoBehaviour
 	{
 		_services.Logic.Init(_services);
 		_services.Logic.OnGameOvered += ShowGameEndScreen;
+		_services.Data.Init(_services);
 		_services.UI.GoToMainMenu();
 	}
 
@@ -56,7 +57,7 @@ public sealed class EntryPoint : MonoBehaviour
 
 	public void FinishGameLoop()
 	{
-		//GestureDetector.Instance.ClearEvent();
+		_services.GestureDetector.ClearEvent();
 		_services.Logic.FinishGameLoop();
 		_services.PlayerProgress.ResetCollectedTokens();
 		//Ads.Instance.ResetFlags();

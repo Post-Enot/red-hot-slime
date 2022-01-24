@@ -12,6 +12,7 @@ public sealed class MainHero : CellEntity
 
 	[SerializeField] private float _healthDisplayingDuration = 3f;
 	[SerializeField] private float _healthIndicatorDisplayHeight = 0.4f;
+	[SerializeField] private GestureDetector _gestureDetector;
 
 	public event Action OnDied;
 
@@ -41,7 +42,7 @@ public sealed class MainHero : CellEntity
 		_healthIndicator = SessionServices.EffectsFactory.SpawnHealthIndicator(transform.position, transform);
 		_healthIndicator.Init(_maxHealthPoint, _healthIndicatorDisplayHeight);
 
-		//var skin = GetComponent<MainHeroSkin>();
+		var skin = GetComponent<MainHeroSkin>();
 		//skin.InitHat();
 		//if (skin.Hat != null)
 		//{
@@ -49,7 +50,7 @@ public sealed class MainHero : CellEntity
 		//	AnimationUpdated += hatAnimator.Play;
 		//}
 		//AnimationUpdated += _visualizator.Play;
-		//GestureDetector.Instance.OnSwipe += TrackInput;
+		_gestureDetector.OnSwipe += TrackInput;
 	}
 
 	public void InitSkin(MainHeroSkin skin)

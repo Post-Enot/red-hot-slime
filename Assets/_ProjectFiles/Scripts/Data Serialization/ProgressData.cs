@@ -10,15 +10,19 @@ public sealed class ProgressData<T>
 		set
 		{
 			_value = value;
+			if (_indicatableValue != null)
+			{
+				_indicatableValue.Value = value;
+			}
 			OnValueChanged?.Invoke(value);
 		}
 	}
 	private T _value;
+	private IndicatableValue _indicatableValue;
 
-	public ProgressData() { }
-
-	public ProgressData(T value = default)
+	public ProgressData(T value = default, IndicatableValue	indicatableValue = null)
 	{
-		_value = value;
+		_indicatableValue = indicatableValue;
+		Value = value;
 	}
 }

@@ -1,11 +1,15 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "PlayerProgress", menuName = "Data Forms/Player Progress", order = 1)]
+[CreateAssetMenu(fileName = "Player Progress", menuName = "Data Containers/Player progress")]
 public sealed class PlayerProgress : ScriptableObject
 {
+	[Header("Indicatable value:")]
+	[SerializeField] private IndicatableValue _gemCount;
+	[SerializeField] private IndicatableValue _goldCount;
+	[SerializeField] private IndicatableValue _bestScore;
+
 	public ProgressData<int> Gems { get; private set; }
 	public ProgressData<int> Gold { get; private set; }
-	// переместить счётчики собранной за игру валюты в другое место
 	public ProgressData<int> GemsCollectedForGame { get; private set; }
 	public ProgressData<int> GoldCollectedForGame { get; private set; }
 	public ProgressData<int> BestScore { get; private set; }
@@ -47,11 +51,11 @@ public sealed class PlayerProgress : ScriptableObject
 
 	private void SynchWithDataForm(PlayerProgressDataForm dataForm)
 	{
-		Gems = new ProgressData<int>(dataForm.Gems);
-		Gold = new ProgressData<int>(dataForm.Gold);
+		Gems = new ProgressData<int>(dataForm.Gems, _gemCount);
+		Gold = new ProgressData<int>(dataForm.Gold, _goldCount);
 		EquippedHat = new ProgressData<string>(dataForm.EquippedHat);
 		string[] hatIdsArray = dataForm.EquippedHat is null ? new string[0] : dataForm.PurchasedHats;
 		PurchasedHats = new UnlockedItemsSet(hatIdsArray);
-		BestScore = new ProgressData<int>(dataForm.BestScore);
+		BestScore = new ProgressData<int>(dataForm.BestScore, _bestScore);
 	}
 }

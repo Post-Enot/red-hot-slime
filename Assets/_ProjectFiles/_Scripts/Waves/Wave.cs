@@ -17,7 +17,7 @@ public abstract class Wave : ScriptableObject
 		}
 		else
 		{
-			throw new ArgumentException();
+			//throw new ArgumentException();
 		}
 	}
 
